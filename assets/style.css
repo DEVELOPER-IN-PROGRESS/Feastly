@@ -1,0 +1,306 @@
+:root{
+    --mainfont: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --font2: Verdana, Tahoma, sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--mainfont);
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+}
+
+header{
+    background-color: white;
+    box-shadow: 2px 3px 20px grey;
+    padding: 20px;
+}
+
+.bannermobile{
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.header .right,
+header .logowrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logowrap h1{
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+header.header{
+    position: sticky;
+    top: 0px;
+    z-index:1000;
+}
+
+header .lpage{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 10px 0px;
+}
+
+header .lpage:hover{
+    border-bottom: 2px solid #fe771c;
+    transition: 200ms ease-out ;
+}
+
+header .menu-item{
+    margin: 0px 10px;
+}
+
+/* Hero banner */
+.herohome{
+    position: relative;
+}
+
+.herohome .textwrap{
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+    width: 500px;
+}
+
+.herohome .title1{
+    font-size: 45px;
+}
+
+.herohome .title2{
+    font-size: 20px;
+    font-family: var(--font2);
+    padding: 10px 0px;
+}
+
+.herohome h2{
+    text-transform: capitalize;
+}
+
+.locationwrap{
+    padding-left: 10px;
+    background-color: white;
+    border-radius: 22px;
+    /* border: 1px solid #d8d8d8; */
+    box-shadow: 1px 10px 25px #808080;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.locationwrap select{
+    background-color: transparent;
+    font-family: var(--font2);
+    border: none;
+    outline: none;
+    width: 140px;
+}
+
+.locationwrap .search{
+    font-size: 18px;
+    background-color: #fe771c;
+    padding: 10px;
+    border: 1px solid #fe771c;
+    outline: none;
+    border-radius: 22px;
+    font-weight: 500;
+}
+
+.locationwrap .search:hover{
+    background-color: white;
+    color: #fe771c;
+}
+
+.locationwrap .search .small{
+    display: none;
+}
+
+.locationwrap input,
+.locationwrap button{
+    font-family: var(--font2);
+}
+
+.locationwrap i::before{
+    color: #fe771c;
+}
+
+.locationwrap input{
+    padding: 10px 5px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    width: 150px;
+    background-color: transparent;
+}
+
+/* .locationwrap input:focus-visible{
+    border: none;
+} */
+
+
+.footer-wrapper{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bannerhero{
+    width: 100%;
+    height: auto;
+}
+
+/* Craving */
+.crave .t1{
+    text-align: center;
+    font-size: 35px;
+    line-height: 1.2;
+    margin: 30px 0px;
+    color: #000000;
+}
+
+.categories .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 15px;
+}
+
+.category .imgwrap{
+    width: 150px;
+    height: 150px;
+    /* border-radius: 50%; */
+}
+
+.category .imgwrap .visual{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 1px 2px 20px #fec51c;
+
+}
+
+.category .name{
+    padding: 10px 0px;
+    font-size: 16px;
+}
+
+/* MENU PAGE */
+.menu-page{
+    text-align: center;
+}
+
+@media (max-width:760px){
+    header .row{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    header .row .right{
+        width: 100%;
+    }
+
+    section.herohome{
+        padding: 50px 0px;
+        background: url('https://mir-s3-cdn-cf.behance.net/projects/404/44ef99148129933.Y3JvcCwyNjA4LDIwNDAsMTQ4LDA.jpg');
+        background-size: cover;
+    }
+
+    .bannermobile{
+        display: block;
+        height: 100%;
+    }
+
+    .herohome .textwrap{
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+        background-color: #f0f8ff82;
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+    .herohome .locationwrap{
+        width: 95%;
+    }
+
+    .locationwrap select{
+        width: 100px;
+
+    }
+
+    .locationwrap .search .small{
+        display: block;
+        font-size: 12px;
+    }
+
+    .locationwrap .search .big,
+    .bannerhero {
+        display: none;
+    }
+
+    .herohome .title1{
+        font-size: 28px;
+    }
+
+    .herohome .title2{
+        font-size: 16px;
+    }
+
+    /* crave */
+    .crave .categories{
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .crave .categories::-webkit-scrollbar-thumb {
+        background: red;
+        border-radius: 10px;
+    }
+
+    .crave .t1{
+        margin: 15px 0px;
+    }
+
+}
+
+@media screen and (min-width:768px){
+    .crave .categories{
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+
+    .crave .categories::-webkit-scrollbar-track{
+        height: 5px;
+    }
+
+    .crave .categories::-webkit-scrollbar {
+        width: 20px;
+      }
+}
